@@ -22,7 +22,7 @@ const StyledHeader = styled.header`
 export function Header() {
   return (
     <StyledHeader>
-      <Link className="logo" to="/Main">
+      <Link className="logo" to="/">
         <Logo  />
       </Link>
       <Avatar className="avatar" />

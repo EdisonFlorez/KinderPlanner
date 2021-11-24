@@ -2,8 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import { App } from "./App";
-import { Login } from "./views/Login";
-import { SignUp } from "./views/SignUp";
+import { Login } from "./modals/Login";
+import { SignUp } from "./modals/SignUp";
 const element = {
   user: {
     name: "Edison",

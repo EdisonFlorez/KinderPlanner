@@ -1,6 +1,7 @@
 import React from "react";
 import { ReactComponent as Logo } from "../assets/Logo.svg";
 import {Button} from "../components/Button";
+import {Link} from "react-router-dom"
 
 export function SignUp() {
   return (
@@ -31,6 +32,7 @@ export function SignUp() {
           required
         />
         <Button type="submit" value="Crea tu cuenta" />
+        <Link to="/login">Iniciar sesión</Link>
       </form>
     </div>
   );

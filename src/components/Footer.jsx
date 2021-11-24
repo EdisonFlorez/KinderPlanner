@@ -30,9 +30,7 @@ export function Footer() {
         <Link to="/">
           <Logo className="logo" />
         </Link>
-        <Routes>
-          <Route path="/sho" element={<Main />} />
-        </Routes>
+        
       </div>
     </StyledFooter>
   );

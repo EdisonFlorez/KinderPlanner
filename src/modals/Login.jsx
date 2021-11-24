@@ -1,6 +1,7 @@
 import React from "react";
 import { ReactComponent as Logo } from "../assets/Logo.svg";
 import { Button } from "../components/Button";
+import {Link} from "react-router-dom";
 export function Login() {
   return (
     <div>
@@ -14,7 +15,7 @@ export function Login() {
           required
         />
         <Button type="submit" value="Inicia sesión" />
-        <Button type="button" value="Crea tu cuenta" />
+        <Link to="/sign-up">Crea tu cuenta</Link>
       </form>
     </div>
   );
