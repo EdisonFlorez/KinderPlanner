@@ -1,8 +1,8 @@
 import React from "react";
 import { ReactComponent as Logo } from "../assets/Logo.svg";
 import styled from "styled-components";
-import { Link, Route, Routes } from "react-router-dom";
-import { Main } from "./Main";
+import { Link } from "react-router-dom";
+
 
 const StyledFooter = styled.footer`
   width: 100%;
@@ -15,10 +15,8 @@ const StyledFooter = styled.footer`
     margin: auto;
   }
   .logo {
-    position: relative;
-    right: 25px;
-    top: 10px;
-    height: 30px;
+    width: fit-content;
+    height: 22px;
   }
 `;
 

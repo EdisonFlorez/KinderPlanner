@@ -1,9 +1,8 @@
 import React from "react";
 import { Menu } from "./Menu";
 import { ReactComponent as Logo } from "../assets/Logo.svg";
-import { Link, Route, Routes } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Avatar } from "./Avatar";
-import { Main } from "./Main";
 import styled from "styled-components";
 
 const StyledHeader = styled.header`
@@ -23,11 +22,10 @@ export function Header() {
   return (
     <StyledHeader>
       <Link className="logo" to="/">
-        <Logo  />
+        <Logo />
       </Link>
       <Avatar className="avatar" />
       <Menu />
-      
     </StyledHeader>
   );
 }

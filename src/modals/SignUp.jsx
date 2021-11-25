@@ -1,11 +1,16 @@
 import React from "react";
 import { ReactComponent as Logo } from "../assets/Logo.svg";
 import {Button} from "../components/Button";
-import {Link} from "react-router-dom"
+import {Link} from "react-router-dom";
+import styled from "styled-components";
+
+const StyledSignUp = styled.article`
+ 
+`
 
 export function SignUp() {
   return (
-    <div>
+    <StyledSignUp>
       <Logo />
       <form>
         <input type="text" name="name" placeholder="Nombres: " required />
@@ -34,6 +39,6 @@ export function SignUp() {
         <Button type="submit" value="Crea tu cuenta" />
         <Link to="/login">Iniciar sesión</Link>
       </form>
-    </div>
+    </StyledSignUp>
   );
 }
