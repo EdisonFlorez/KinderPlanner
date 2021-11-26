@@ -18,4 +18,5 @@ server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
 
 // API's
-server.use("/create", require("./routes/instructor.routes"));
+server.use("/instructor", require("./routes/instructor.routes"));
+

@@ -11,5 +11,5 @@ const instructor_schema = new mongoose.Schema({
 });
 
 //Model
-const Instructor = mongoose.model("Instructor", instructor_schema);
-export default Instructor;
+module.exports = mongoose.model("Instructor", instructor_schema);
+
