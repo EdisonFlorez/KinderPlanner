@@ -10,4 +10,4 @@ const activity_schema = new mongoose.Schema({
 
 // Model
 const Activity = new mongoose.model("Activity", activity_schema);
-export default Activity;
+module.exports = Activity;

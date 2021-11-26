@@ -19,4 +19,4 @@ server.use(express.urlencoded({ extended: true }));
 
 // API's
 server.use("/instructor", require("./routes/instructor.routes"));
-
+server.use("/activity", require("./routes/activity.routes"));
