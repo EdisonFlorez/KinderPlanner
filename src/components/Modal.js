@@ -10,7 +10,7 @@ const StyledModal = styled.article`
   z-index: 2;
   width: 100%;
   min-height: 100vh;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.85);
   .modal.is-open {
     display: flexbox;
   }
