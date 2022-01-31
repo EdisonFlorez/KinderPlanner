@@ -1,8 +1,7 @@
-import React, {useState, useEffect} from "react";
-import { Button } from "./Button";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
-const StyledModal = styled.article`
+const Overlay = styled.div`
   justify-content: center;
   vertical-align: middle;
   align-items: center;
@@ -12,10 +11,9 @@ const StyledModal = styled.article`
   z-index: 2;
   width: 100%;
   min-height: 100vh;
-  background: rgba(0, 0, 0, 0.85);
-  .modal.is-open {
-    display: flexbox;
-  }
+  background: rgba(0, 0, 0, 0.7);
+  display: flexbox;
+
   .modal-container {
     max-width: 350px;
     padding: 40px 40px;
@@ -29,16 +27,23 @@ const StyledModal = styled.article`
     left: 200px;
   }
 `;
-export function Modal({ children, visible, setVisible }) {
-
+export function Modal({ children }) {
+  const navigate = useNavigate();
+  const closeModal = () => {
+    navigate("/");
+  }
   return (
-    <StyledModal className="modal is-open">
-      
-      <div className="modal-container">
-        <Button value="X" type="button" className="modal-close" onClick={()=> setVisible(false)} />
+    <Overlay onClick={closeModal}>
+      <div className="modal-container" onClick={(event)=> event.stopPropagation()}>
+        {/* Si hago que el botón en vez de cambiar la visibilidad elimine el componente y vuelva a la ruta "padre"
+         */}
+        <button
+          onClick={closeModal}
+        >
+          X
+        </button>
         {children}
       </div>
-      
-    </StyledModal>
+    </Overlay>
   );
 }

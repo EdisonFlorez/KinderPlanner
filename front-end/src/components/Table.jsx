@@ -3,12 +3,12 @@ import styled from "styled-components";
 import { Button } from "./Button";
 
 const StyledTable = styled.div`
-  position: absolute;
+  position: relative;
   margin: 0 5vmax;
   border: solid 9px #bcff78;
   border-radius: 40px;
 
-  height: 3000px;
+  height: fit-content;
   h1 {
     margin-left: 5vw;
     margin-right: 5vw;
@@ -56,7 +56,7 @@ export function Table() {
         </label>
         <input className="input-fecha" type="date" name="fecha" />
       </div>
-      <h1>Descripción</h1>
+      <h1>Docentes</h1>
 
       <div className="teacher-info">
         <p>

@@ -1,49 +1,45 @@
-import React, {useState} from "react";
-import { Button } from "./Button";
+import React from "react";
 import Image from "../assets/KinderArt.png";
 import styled from "styled-components";
-import { Link, Route, Routes } from "react-router-dom";
-import { Modal } from "../components/Modal";
-import { Login } from "../modals/Login";
-import { SignUp } from "../modals/SignUp";
+import { Link } from "react-router-dom";
+
 const StyledMain = styled.main`
+  display: flexbox;
+  flex-direction: row;
   .slider {
     width: 80vw;
     height: 80vh;
   }
+  .button-box{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  button{
+    margin: 1rem;
+    width: 10vw;
+    height: 3vh;
+    background:#916BBF;
+    border: none;
+    border-radius: 3vmax;
+    color: white;
+    
+  }
 `;
 
 export function Main() {
-  const [visible, setVisible] = useState(true)
-  
   return (
     <StyledMain>
       <img className="slider" src={Image} alt="Arte realizada con niños" />
-      <Link to="/sign-up">
-        <Button type="button" value="Crea tu cuenta" />
-      </Link>
-      <Link to="/login">
-        <Button type="button" value="Inicia sesión" />
-      </Link>
-
-      <Routes>
-        <Route
-          path="sign-up"
-          element={
-            <Modal visible={visible} setVisible={setVisible} >
-              <SignUp />
-            </Modal>
-          }
-        />
-        <Route
-          path="login"
-          element={
-            <Modal visible={visible} setVisible={setVisible}>
-              <Login />
-            </Modal>
-          }
-        />
-      </Routes>
+      <div className="button-box">
+        <Link to="/sign-up">
+          <button>Crea tu cuenta</button>
+        </Link>
+        <Link to="/login">
+          <button>Inicia sesión</button>
+        </Link>
+      </div>
     </StyledMain>
   );
 }

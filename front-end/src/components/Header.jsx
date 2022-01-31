@@ -2,7 +2,6 @@ import React from "react";
 import { Menu } from "./Menu";
 import { ReactComponent as Logo } from "../assets/Logo.svg";
 import { Link } from "react-router-dom";
-import { Avatar } from "./Avatar";
 import styled from "styled-components";
 
 const StyledHeader = styled.header`
@@ -24,7 +23,6 @@ export function Header() {
       <Link className="logo" to="/">
         <Logo />
       </Link>
-      <Avatar className="avatar" />
       <Menu />
     </StyledHeader>
   );

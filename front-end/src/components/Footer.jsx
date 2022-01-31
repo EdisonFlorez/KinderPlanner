@@ -10,6 +10,8 @@ const StyledFooter = styled.footer`
   display: flex;
   align-items: center;
   background: #ff7878;
+  position: fixed;
+  bottom:0;
   .container {
     display: flex;
     margin: auto;

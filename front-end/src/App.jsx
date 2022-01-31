@@ -1,13 +1,37 @@
+import { Route, Routes } from "react-router-dom";
+import { Table } from "./components/Table";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { Main } from "./components/Main";
-
+import { Modal } from "./components/Modal";
+import { Login } from "./modals/Login"
+import { SignUp } from "./modals/SignUp";
 
 export function App() {
   return (
     <>
       <Header />
-      <Main />
+      
+      <Routes>
+        <Route path="/" element={<Main />}/>
+        <Route path="/admin" element={<Table />} />
+        <Route
+          path="sign-up"
+          element={
+            <Modal>
+              <SignUp />
+            </Modal>
+          }
+        />
+        <Route
+          path="login"
+          element={
+            <Modal>
+              <Login />
+            </Modal>
+          }
+        />
+      </Routes>
       <Footer className="footer" />
     </>
   );

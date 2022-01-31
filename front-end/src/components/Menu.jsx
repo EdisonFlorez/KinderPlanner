@@ -1,24 +1,26 @@
-import React from 'react'
-import styled from 'styled-components'
-import {Avatar} from './Avatar'
+import React, { useState } from "react";
+import { Avatar } from "./Avatar";
+import { Dropdow } from "./Dropdown.container";
+import styled from "styled-components";
 
-const StyledMenu = styled.select`
-    width: auto;
-    height: 20px;
-    position: absolute;
-    right: 20vh;
-    top: 20px;
-    appearance: none;
-    background: url(https://cdn-icons-png.flaticon.com/512/147/147144.png);
-`
+const StyledMenu = styled.div`
+button{
+  display: inline-block;
+  position: absolute;
+  right: 4.5vw;
+  top: 2.5vh;
+  background:none;
+  border: none;
+}
+
+` 
 export function Menu() {
-    return (
-        <StyledMenu>
-            
-            <option value="">valor 1</option>
-            <option value="">valor 2</option>
-            <option value="">valor 3</option>
-            
-        </StyledMenu>
-    )
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <StyledMenu>
+      <Avatar className="avatar"/>
+      <button onClick={() => setIsOpen(!isOpen)}>▼</button>
+      {isOpen && <Dropdow className="dropdown-container"/>}
+    </StyledMenu>
+  );
 }
