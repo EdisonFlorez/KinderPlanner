@@ -47,6 +47,8 @@ const StyledTable = styled.div`
     border:none;
   }
 `;
+//acá tengo que hacer la petición de la base de datos.
+
 export function Table() {
   return (
     <StyledTable>

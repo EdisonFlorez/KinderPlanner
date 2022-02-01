@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 const StyledAvatar = styled.div`
-    position: absolute;
+    position: relative;
     top: 5px;
-    right: 10vh ;
+    right: -10vh ;
     img{
         width: 50px;
         height: 50px;

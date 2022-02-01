@@ -6,10 +6,19 @@ import { Main } from "./components/Main";
 import { Modal } from "./components/Modal";
 import { Login } from "./modals/Login"
 import { SignUp } from "./modals/SignUp";
+import styled from "styled-components";
 
+const StyledApp = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  scroll-behavior: none;
+`
 export function App() {
   return (
-    <>
+    <StyledApp>
       <Header />
       
       <Routes>
@@ -33,6 +42,6 @@ export function App() {
         />
       </Routes>
       <Footer className="footer" />
-    </>
+    </StyledApp>
   );
 }
