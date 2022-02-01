@@ -1,15 +1,11 @@
 import React from "react";
-import Image from "../assets/KinderArt.png";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { Slider } from "./Slider";
 
 const StyledMain = styled.main`
   display: flexbox;
   flex-direction: row;
-  .slider {
-    width: 80vw;
-    height: 80vh;
-  }
   .button-box{
     width: 300px;
     display: flex;
@@ -31,7 +27,7 @@ const StyledMain = styled.main`
 export function Main() {
   return (
     <StyledMain>
-      <img className="slider" src={Image} alt="Arte realizada con niños" />
+      <Slider/>
       <div className="button-box">
         <Link to="/sign-up">
           <button>Crea tu cuenta</button>

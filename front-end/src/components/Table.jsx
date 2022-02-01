@@ -39,12 +39,12 @@ const StyledTable = styled.div`
     position: sticky;
     right: 0;
     top: 0;
-    background: #916BBF;
+    background: #916bbf;
     padding: 1.5vh;
   }
-  button{
+  button {
     margin-left: 10px;
-    border:none;
+    border: none;
   }
 `;
 //acá tengo que hacer la petición de la base de datos.
@@ -85,7 +85,12 @@ export function Table() {
             backgroundColor="#FF7878"
             color="#fff"
           />
-          <Button type="button" value="Eliminar" backgroundColor="#4E4E4E" color="#fff"/>
+          <Button
+            type="button"
+            value="Eliminar"
+            backgroundColor="#4E4E4E"
+            color="#fff"
+          />
         </div>
       </div>
       <div className="teacher-info">
@@ -103,7 +108,12 @@ export function Table() {
             backgroundColor="#FF7878"
             color="#fff"
           />
-          <Button type="button" value="Eliminar" backgroundColor="#4E4E4E" color="#fff"/>
+          <Button
+            type="button"
+            value="Eliminar"
+            backgroundColor="#4E4E4E"
+            color="#fff"
+          />
         </div>
       </div>
     </StyledTable>
